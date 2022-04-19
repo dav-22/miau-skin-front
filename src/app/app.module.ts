@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { CommonModule } from '@angular/common';
 import { ProductComponent } from './components/product/product.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ModalImageComponent } from './components/modal-image/modal-image.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ProductComponent
+    ProductComponent,
+    FooterComponent,
+    ModalImageComponent
   ],
   imports: [
     BrowserModule,
