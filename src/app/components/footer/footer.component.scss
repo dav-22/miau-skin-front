@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300&family=Lobster&display=swap');
+
+.main {
+    background-color: #F7C6D8;
+    width: 100%;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+
+    .content {
+        width: 100%;
+        height: 100%;
+        // background-color: red;
+
+        .divider {
+            height: 100px;
+            width: 3px;
+            background-color: blue;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .social {
+            font-size: x-large;
+            gap: 2rem;
+            a:hover {
+                color: #f99aaa;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+
+        .miau-skin {
+            font-family: 'Lobster', sans-serif;
+            color: #2E2E2E;
+        }
+    }
+}

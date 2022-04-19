@@ -1,28 +1,63 @@
 <div class="main">
-  
-  <div class="header" [ngStyle]="{height: height + 'px'}">
-    <div class="logo">
-      <img src="assets/images/logo.png" alt="">
+  <div class="header d-flex flex-column align-items-center" [ngStyle]="{ height: height + 'px' }">
+    <div class="logo d-flex justify-content-center align-items-center">
+      <img src="assets/images/logo_miau.png" alt="" />
     </div>
-    <div class="d-flex justify-content-center align-items-center cat">
-
-      <img src="assets/images/miau2.jpeg" alt="">
+    <div class="d-flex flex-column justify-content-around align-items-center info">
+      <h1>Miau Skin</h1>
+      <span
+       class="text-center text-white text"
+        >
+          Somos miau skin, un emprendimiento destinado al cuidado de la piel. En ésta página 
+          encontrarás diversos combos para cada biotipo cutáneo. Para adquirir tus combos
+          comunicarte a nuestro 
+          <a 
+            target="_blank"
+            href="https://instagram.com/miau_skin?igshid=YmMyMTA2M2Y="
+          >
+            Instagram
+          </a> o 
+          <a
+            target="_blank"
+            href="https://wa.me/3875742926"
+          >
+            WhatsApp
+          </a>.
+        </span
+      >
     </div>
     <div class="d-flex align-items-center justify-content-center marks">
-      <img src="assets/images/exel.png" alt="">
-      <img src="assets/images/idraet.png" alt="">
-      <img src="assets/images/lidherma.png" alt="">
+      <a href="#lidherma" data-target="" target="_self">
+        <img src="assets/images/lidherma.png" alt="" />
+      </a>
+
+      <a href="#exel">
+        <img  src="assets/images/exel.png" alt="" />
+      </a>
+
+      <a href="#idraet">
+        <img src="assets/images/idraet.png" alt="" />
+      </a>
+     
     </div>
   </div>
 
   <div class="body">
-      <div class="products" *ngFor="let i of [1, 2, 3, 4, 5, 6]" >
-        <app-product></app-product>
+    <div *ngFor="let p of products; let ind = index" [attr.id]="p.id">
+      <div class="title d-flex justify-content-center pt-5">
+        <h2>{{ p.category }}</h2>
       </div>
-    
+      <div class="products" >
+        <app-product *ngFor="let i of p.items" [product]="i"></app-product>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="divider" *ngIf="ind != products.length - 1"></div>
+      </div>
+    </div>
   </div>
 
   <div class="footer">
-    footer
+    <app-footer></app-footer>
   </div>
 </div>
+
